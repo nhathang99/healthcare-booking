@@ -1,10 +1,15 @@
 import React, { ReactNode } from "react";
+import Navbar from "../components/Dashboard/Navbar";
+import Sidebar from "../components/Dashboard/Sidebar";
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (
     <div>
-      <h2>I am dashboard only pages layout</h2>
-      {children}
+      <Navbar />
+      <div className="flex">
+        <Sidebar />
+        {children}
+      </div>
     </div>
   );
 };

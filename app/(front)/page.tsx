@@ -1,10 +1,19 @@
+import CustomTabs from "../components/Frontend/Tabs";
 import Hero from "../components/Frontend/Hero";
+import DoctorList from "../components/ui/DoctorList";
 
 const Home = () => {
   return (
-    <div className="max-w-6xl mx-auto">
+    <section className="">
       <Hero />
-    </div>
+      <CustomTabs />
+      <DoctorList title="Telehealth visit" />
+      <DoctorList
+        className="bg-white py-8 lg:py-24"
+        title="In-person visit"
+        isInPerson={true}
+      />
+    </section>
   );
 };
 
